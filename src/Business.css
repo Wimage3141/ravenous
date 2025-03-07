@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+}
+
+.business {
+  height: 320px; 
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  margin-bottom: 5px;
+}
+
+.business-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: 5px;
+}
+
+.title {
+  margin-left: 5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.business-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.business-address {
+  font-size: 11px;
+}
+
+.business-ratings {
+  font-size: 11px;
+}
+
+.address {
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+
+.ratings {
+  margin-bottom: 1px;
+  margin-left: 5px;
+}

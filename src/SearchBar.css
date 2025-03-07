@@ -1,0 +1,9 @@
+* {
+  margin: 0px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

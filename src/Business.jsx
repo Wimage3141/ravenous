@@ -1,5 +1,6 @@
 import React from "react";
 import restaurantImage from "./assets/MogeTeeImage.png";
+import './Business.css';
 
 function Business() {
     const restaurantName = "Moge Tee - Tampa";
@@ -14,21 +15,24 @@ function Business() {
     return (
       <div className="business">
         <img
+        className="business-img"
         src={restaurantImage}
         alt={restaurantName}
         />
-        <h2>{restaurantName}</h2>
+        <h3 className="title">{restaurantName}</h3>
 
-        <div className="business-address">
-          <p>{address}</p>
-          <p>{city}</p>
-          <p>{state}, {zipcode}</p>
-        </div>
+        <div className="business-info">
+          <div className="business-address">
+            <p className="address">{address}</p>
+            <p className="address">{city}</p>
+            <p className="address">{state}, {zipcode}</p>
+          </div>
 
-        <div className="business-rating">
-          <p>{category}</p>
-          <p>{rating} stars</p>
-          <p>{reviewCount} reviews</p>
+          <div className="business-ratings">
+            <p className="ratings">{category}</p>
+            <p className="ratings">{rating} stars</p>
+            <p className="ratings">{reviewCount} reviews</p>
+          </div>
         </div>
       </div>
     );
