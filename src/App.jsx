@@ -32,12 +32,28 @@ default stuff:
 */
 
 function App() {
-  const [count, setCount] = useState(0);
+  const businessObject = {
+    restaurantName: 'Moge Tee - Tampa',
+    address: '2850 University Square Dr',
+    city: 'Tampa',
+    state: 'FL',
+    zipcode: '33612',
+    category: 'Bubble Tea',
+    rating: 4.7,
+    reviewCount: 245
+  };
+
+  // The yelp API would probably give us a array of 'business' objects
+  // each object holding keys such as 'restaurantName', 'address', 'city', etc.
+
+  const businessObjectList = Array.from({ length: 9 }, () => ({ ...businessObject }));
+
+  console.log(businessObjectList);
 
   return (
     <div>
       <SearchBar />
-      <BusinessList />
+      <BusinessList businessObjectList={businessObjectList}/>
     </div>
   )
 }

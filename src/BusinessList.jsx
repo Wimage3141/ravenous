@@ -7,13 +7,26 @@ The BusinessList component should utilize the Business component multiple
 times to generate the list.
 */
 
-function BusinessList() {
+function BusinessList(props) {
   // placeholder, we will get actual lists later, for now im just duplicating my index
-  const businessList = Array.from({length: 9}, (_, index) => <Business key={index} />);
+  // .from() creates an array from an iterable
+  
+  // My plan:
+  // props contains a list of objects
+  // businessObjectList = props:
+  // for businessObject in businessObjectList:
+  //    map businessObject to <Business /> component
+  // return all the list with all the <Business /> components
+
+  const businessObjectList = props.businessObjectList;
+  const businessComponentList = [];
+  for(let businessObject of businessObjectList) {
+    businessComponentList.push(<Business businessObject={businessObject} />);
+  }
 
   return (
     <div className="business-list">
-      {businessList}
+      {businessComponentList}
     </div>
   );
 }
