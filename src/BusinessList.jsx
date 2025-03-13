@@ -24,6 +24,8 @@ function BusinessList(props) {
     businessComponentList.push(<Business businessObject={businessObject} />);
   }
 
+  // works
+
   return (
     <div className="business-list">
       {businessComponentList}
