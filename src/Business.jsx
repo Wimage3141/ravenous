@@ -2,6 +2,8 @@ import React from "react";
 import restaurantImage from "./assets/MogeTeeImage.png";
 import './Business.css';
 
+// Business component
+
 function Business(props) {
     return (
       <div className="business">
